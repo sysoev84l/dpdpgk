@@ -13,6 +13,9 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="footer-bottom__wrapper">
+						<div class="img-foooter_wrap">
+							<img src="./assets/img/dpd.jpg" alt="" class="footer-img">
+						</div>
 						<div class="copyright-txt">
 							Copyright &copy;
 							<?= date('Y') ?> &nbsp; <a href='/'>
