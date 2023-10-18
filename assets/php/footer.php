@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h2>Срочно требуются на работу ебанные операторы</h2>
+					<h2><img src="./assets/img/dpd2.jpg" alt="" class="footer-img"></h2>
 				</div>
 			</div>
 		</div>
