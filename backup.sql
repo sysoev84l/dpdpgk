@@ -22,7 +22,7 @@ CREATE TABLE `work_time` (
   `time_end` time NOT NULL,
   `break_time` float NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=310 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=311 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 INSERT INTO work_time VALUES("1","2021-02-22","10:00:00","16:00:00","0.5");
 INSERT INTO work_time VALUES("2","2021-02-21","10:30:00","13:30:00","0");
@@ -313,6 +313,7 @@ INSERT INTO work_time VALUES("306","2023-10-20","09:00:00","21:00:00","1");
 INSERT INTO work_time VALUES("307","2023-10-22","11:00:00","17:00:00","0");
 INSERT INTO work_time VALUES("308","2023-10-23","09:00:00","21:00:00","1");
 INSERT INTO work_time VALUES("309","2023-10-24","09:00:00","21:00:00","1");
+INSERT INTO work_time VALUES("310","2023-10-25","09:00:00","20:00:00","1");
 
 
 
