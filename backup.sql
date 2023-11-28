@@ -9,7 +9,7 @@ CREATE TABLE `work_price` (
 
 INSERT INTO work_price VALUES("2","2022-09-01","150");
 INSERT INTO work_price VALUES("5","2021-02-01","135");
-INSERT INTO work_price VALUES("6","2023-10-01","199");
+INSERT INTO work_price VALUES("6","2023-10-01","209");
 
 
 
@@ -22,7 +22,7 @@ CREATE TABLE `work_time` (
   `time_end` time NOT NULL,
   `break_time` float NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=331 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=338 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 INSERT INTO work_time VALUES("1","2021-02-22","10:00:00","16:00:00","0.5");
 INSERT INTO work_time VALUES("2","2021-02-21","10:30:00","13:30:00","0");
@@ -334,6 +334,13 @@ INSERT INTO work_time VALUES("327","2023-11-14","09:00:00","21:00:00","1");
 INSERT INTO work_time VALUES("328","2023-11-16","09:00:00","20:00:00","1");
 INSERT INTO work_time VALUES("329","2023-11-16","09:00:00","20:00:00","1");
 INSERT INTO work_time VALUES("330","2023-11-17","09:00:00","21:00:00","1");
+INSERT INTO work_time VALUES("331","2023-11-19","11:00:00","18:00:00","0");
+INSERT INTO work_time VALUES("332","2023-11-20","09:00:00","21:00:00","1");
+INSERT INTO work_time VALUES("333","2023-11-21","09:00:00","21:00:00","1");
+INSERT INTO work_time VALUES("334","2023-11-22","09:00:00","21:00:00","1");
+INSERT INTO work_time VALUES("335","2023-11-23","09:00:00","21:00:00","1");
+INSERT INTO work_time VALUES("336","2023-11-24","09:00:00","20:00:00","1");
+INSERT INTO work_time VALUES("337","2023-11-28","09:00:00","20:00:00","1");
 
 
 
