@@ -26,6 +26,9 @@
 							<li class="nav-item" data-page="2">
 								<a class="nav-link" href="/range.php">Range <span class="sr-only">(current)</span></a>
 							</li>
+							<li class="nav-item" data-page="3">
+								<a class="nav-link" href="/tools.php">Tools <span class="sr-only">(current)</span></a>
+							</li>
 						</ul>
 					</div>
 				</nav>
