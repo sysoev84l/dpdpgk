@@ -88,8 +88,8 @@ $current_month = date('Y-m');
 							   $otch=$_POST['otc'];
 							   $user="INSERT INTO `user` (`name`, `sname`, `otch`) VALUE ('$name', '$sname', 'otch')"
 							   $mysqli->query($user);*/
-
-							$destiation = dirname(__FILE__) . '/load/' . $_FILES['file'];
+							print_r_pre($_FILES);
+							$destiation = dirname(__FILE__) .'/'.$_FILES['file']['name'];
 							// Директория для размещения файла
 							move_uploaded_file($_FILES['file']['tmp_name'], $destiation); //Перемещаем файл в желаемую директорию
 							echo 'File Uploaded'; // Оповещаем пользователя об успешной загрузке файла
