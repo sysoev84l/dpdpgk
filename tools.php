@@ -18,38 +18,6 @@ $current_month = date('Y-m');
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-
-
-						<section class="mb-4 section__form_range">
-							<form class="form-range" action="" method="POST">
-								<div class="form-group">
-									<label for="date">Начальная дата</label>
-									<input class="form-control" type="date" id="date_start" name="date_start" required>
-								</div>
-								<div class="form-group">
-									<label for="date">Конечная дата</label>
-									<input class="form-control" type="date" id="date_end" name="date_end" required>
-								</div>
-								<div class="form-group form-check">
-									<input type="checkbox" class="form-check-input" id="currentMonthCheck"
-										name="currentMonthCheck">
-									<label class="form-check-label" for="currentMonthCheck">Текущий
-										месяц</label>
-								</div>
-								<div class="row">
-									<div class="col-6">
-										<button type="submit" class="form-control btn btn-primary">Применить</button>
-									</div>
-									<div class="col-6">
-										<button type="reset" id="btn_reset_form_range"
-											class="form-control btn btn-primary">Сбросить</button>
-									</div>
-								</div>
-							</form>
-
-
-						</section>
-
 						<section class="mb-4 section__title">
 
 							<div class="h2__title">
@@ -62,11 +30,10 @@ $current_month = date('Y-m');
 						</section>
 
 						<section class="mb-4" form-load>
-							<p class="text-center h5">Добавить номера из файла на сервере</p>
 							<form action="" enctype="multipart/form-data" method="POST">
 								<div class="form-group">
-									<input class="form-control" type="file" id="file" name="file">
-									<label for="file">Выберите файл</label><br>
+									<label for="file">Example file input</label>
+									<input class="form-control-file" type="file" id="file" name="file">
 								</div>
 
 								<div class="row">
@@ -80,19 +47,50 @@ $current_month = date('Y-m');
 							</form>
 						</section>
 						<?php
-						//if(!empty($_POST['name']) && !empty($_POST['sname']) && !empty($_POST['otch']) && isset($_FILES) && $_FILES['1str']['error'] == 0 && $_FILES['prop']['error'] == 0)
-						if (isset($_FILES) && $_FILES['file']['error'] == 0) { // Проверяем, загрузил ли пользователь файл
-							/*connect();
-							   $name=$_POST['name'];
-							   $sname=$_POST['sname'];
-							   $otch=$_POST['otc'];
-							   $user="INSERT INTO `user` (`name`, `sname`, `otch`) VALUE ('$name', '$sname', 'otch')"
-							   $mysqli->query($user);*/
+						if (isset($_FILES) && !empty($_FILES) && $_FILES['file']['error'] == 0) { // Проверяем, загрузил ли пользователь файл
 							print_r_pre($_FILES);
-							$destiation = dirname(__FILE__) .'/'.$_FILES['file']['name'];
+							print_r_pre($POST);
+							$destiation = dirname(__FILE__) . '/' . $_FILES['file']['name'];
 							// Директория для размещения файла
 							move_uploaded_file($_FILES['file']['tmp_name'], $destiation); //Перемещаем файл в желаемую директорию
 							echo 'File Uploaded'; // Оповещаем пользователя об успешной загрузке файла
+						
+							// Name of the data file
+							// $filename = 'mydump.sql';
+							// MySQL host
+							// $mysqlHost = 'localhost';
+							// MySQL username
+							// $mysqlUser = 'root';
+							// MySQL password
+							// $mysqlPassword = '';
+							// Database name
+							// $mysqlDatabase = 'newdatabase';
+
+							// Connect to MySQL server
+							// $link = mysqli_connect($mysqlHost, $mysqlUser, $mysqlPassword, $mysqlDatabase) or die('Error connecting to MySQL Database: ' . mysqli_error());
+
+
+							$tempLine = '';
+							// Read in the full file
+							$lines = file($_FILES['file']['tmp_name']);
+							// Loop through each line
+							foreach ($lines as $line) {
+
+								// Skip it if it's a comment
+								if (substr($line, 0, 2) == '--' || $line == '')
+									continue;
+
+								// Add this line to the current segment
+								$tempLine .= $line;
+								// If its semicolon at the end, so that is the end of one query
+								if (substr(trim($line), -1, 1) == ';') {
+									// Perform the query
+									mysqli_query($link, $tempLine) or print("Error in " . $tempLine . ":" . mysqli_error());
+									// Reset temp variable to empty
+									$tempLine = '';
+								}
+							}
+							echo "Tables imported successfully";
 						} else {
 							echo 'No File Uploaded'; // Оповещаем пользователя о том, что файл не был загружен
 						}
