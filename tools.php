@@ -54,43 +54,6 @@ $current_month = date('Y-m');
 							// Директория для размещения файла
 							move_uploaded_file($_FILES['file']['tmp_name'], $destiation); //Перемещаем файл в желаемую директорию
 							echo 'File Uploaded'; // Оповещаем пользователя об успешной загрузке файла
-						
-							// Name of the data file
-							// $filename = 'mydump.sql';
-							// MySQL host
-							// $mysqlHost = 'localhost';
-							// MySQL username
-							// $mysqlUser = 'root';
-							// MySQL password
-							// $mysqlPassword = '';
-							// Database name
-							// $mysqlDatabase = 'newdatabase';
-
-							// Connect to MySQL server
-							// $link = mysqli_connect($mysqlHost, $mysqlUser, $mysqlPassword, $mysqlDatabase) or die('Error connecting to MySQL Database: ' . mysqli_error());
-
-
-							$tempLine = '';
-							// Read in the full file
-							$lines = file($_FILES['file']['tmp_name']);
-							// Loop through each line
-							foreach ($lines as $line) {
-
-								// Skip it if it's a comment
-								if (substr($line, 0, 2) == '--' || $line == '')
-									continue;
-
-								// Add this line to the current segment
-								$tempLine .= $line;
-								// If its semicolon at the end, so that is the end of one query
-								if (substr(trim($line), -1, 1) == ';') {
-									// Perform the query
-									mysqli_query($link, $tempLine) or print("Error in " . $tempLine . ":" . mysqli_error());
-									// Reset temp variable to empty
-									$tempLine = '';
-								}
-							}
-							echo "Tables imported successfully";
 						} else {
 							echo 'No File Uploaded'; // Оповещаем пользователя о том, что файл не был загружен
 						}

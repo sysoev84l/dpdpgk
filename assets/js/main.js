@@ -9,7 +9,7 @@ navItems.forEach(navItem => {
         navItem.classList.add('active');
     }
 });
-currentMonthCheck.addEventListener('click', function (e) {
+currentMonthCheck.addEventListener('click', e => {
     if (currentMonthCheck.checked) {
         dateStart.disabled = true;
         dateEnd.disabled = true;
@@ -19,7 +19,7 @@ currentMonthCheck.addEventListener('click', function (e) {
         dateEnd.disabled = false;
     }
 });
-btn_reset_form_range.addEventListener('click', function (e) {
+btn_reset_form_range.addEventListener('click', e => {
     dateStart.disabled = false;
     dateEnd.disabled = false;
 })
