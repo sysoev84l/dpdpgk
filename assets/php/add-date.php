@@ -18,7 +18,8 @@
 		$break_time = $_POST['break-time'];
 		$sql = "INSERT INTO `work_time` (`date`, `time_start`, `time_end`, `break_time`) VALUES ('$date', '$time_start', '$time_end', '$break_time')";
 		$result = $mysqli->query($sql);
-		header("Location: ". get_sn()); 
+		header("Location: ". get_sn());
+		// echo "<script>window.location.href=' " . get_sn(). "'</script>";
 	}
 	?>
 </body>
