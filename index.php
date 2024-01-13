@@ -36,11 +36,11 @@ $current_month = date('Y-m');
 								</div>
 								<div class="row">
 									<div class="col-6">
-										<button type="submit" class="form-control btn btn-primary">Применить</button>
+										<button type="reset" id="btn_reset_form_range"
+										class="form-control btn btn-primary">Сбросить</button>
 									</div>
 									<div class="col-6">
-										<button type="reset" id="btn_reset_form_range"
-											class="form-control btn btn-primary">Сбросить</button>
+										<button type="submit" class="form-control btn btn-primary">Применить</button>
 									</div>
 								</div>
 							</form>
@@ -169,10 +169,10 @@ $current_month = date('Y-m');
 								</div>
 								<div class="row mt-3">
 									<div class="col-6">
-										<button type="submit" class="form-control btn btn-primary">Применить</button>
+										<button type="reset" class="form-control btn btn-primary">Сбросить</button>
 									</div>
 									<div class="col-6">
-										<button type="reset" class="form-control btn btn-primary">Сбросить</button>
+										<button type="submit" class="form-control btn btn-primary">Применить</button>
 									</div>
 								</div>
 							</form>
