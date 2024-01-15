@@ -23,10 +23,15 @@
 							</a>
 						</div>
 						<div class="copyright-txt">
-							Copyright &copy;
-							<?= date('Y') ?> &nbsp; <a href='/'>
-								<?= get_sn() ?>
-							</a>
+							<div class="copyright-date">
+								Copyright &copy;
+								<?= date('Y') ?> &nbsp;
+							</div>
+							<div class="copyright-link">
+								<a href='/'>
+									<?= get_sn() ?>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>

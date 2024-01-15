@@ -38,14 +38,13 @@ $current_month = date('Y-m');
 
 								<div class="row">
 									<div class="col-6">
-										<button type="submit" class="form-control btn btn-primary">Применить</button>
+										<button type="reset" class="form-control btn btn-primary">Сбросить</button>
 									</div>
 									<div class="col-6">
-										<button type="reset" class="form-control btn btn-primary">Сбросить</button>
+										<button type="submit" class="form-control btn btn-primary">Применить</button>
 									</div>
 								</div>
 							</form>
-						</section>
 						<?php
 						if (isset($_FILES) && !empty($_FILES) && $_FILES['file']['error'] == 0) { // Проверяем, загрузил ли пользователь файл
 							print_r_pre($_FILES);
@@ -58,6 +57,10 @@ $current_month = date('Y-m');
 							echo 'No File Uploaded'; // Оповещаем пользователя о том, что файл не был загружен
 						}
 						?>
+												</section>
+						<section class="info">
+							<?= $_SERVER['SERVER_SOFTWARE'] ?>
+						</section>
 					</div>
 				</div>
 			</div>
