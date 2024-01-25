@@ -1,6 +1,6 @@
 # export sql
 ./export.php
-cat export.php
+cat backup.sql
 ./export2.php
 
 # git commit & push to github
