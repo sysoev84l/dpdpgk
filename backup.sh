@@ -10,4 +10,4 @@ git push
 # archiving and saving to yandex.disk
 tar -cvzf ../dpdpgk.local.tar.gz *
 zip -r ../dpdpgk.local.zip *
-cp ../dpdpgk.local.* ~/Yandex.Disk/_backup/www/
+cp --verbose  ../dpdpgk.local.* ~/Yandex.Disk/_backup/www/
