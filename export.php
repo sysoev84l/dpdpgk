@@ -48,6 +48,7 @@ $handle = fopen('backup.sql', 'w+');
 fwrite($handle, $return);
 fclose($handle);
 
+
 echo "success";
 
 ?>
