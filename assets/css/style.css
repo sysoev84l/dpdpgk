@@ -230,7 +230,7 @@ footer {
 /* 320px - 576px */
 @media screen and (max-width: 576px) {
   .h2__title h2 {
-    font-size: 12px !important; }
+    font-size: 18px !important; }
   .h2__title .left_h2 {
     border: 8.4px solid transparent;
     border-left-color: #000; }
