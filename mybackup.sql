@@ -26,7 +26,7 @@ CREATE TABLE `work_time` (
   `break_time` float NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `date` (`date`)
-) ENGINE=InnoDB AUTO_INCREMENT=393 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=398 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 
 INSERT INTO work_time VALUES
@@ -399,6 +399,11 @@ INSERT INTO work_time VALUES
 ("389","2024-01-29","09:00:00","19:00:00","1"),
 ("390","2024-01-30","09:00:00","19:00:00","1"),
 ("391","2024-02-01","09:00:00","20:00:00","1"),
-("392","2024-02-02","09:00:00","19:00:00","1");
+("392","2024-02-02","09:00:00","19:00:00","1"),
+("393","2024-02-04","10:00:00","15:00:00","0"),
+("394","2024-02-05","09:00:00","21:00:00","1"),
+("395","2024-02-06","09:00:00","19:00:00","1"),
+("396","2024-02-07","09:00:00","20:00:00","1"),
+("397","2024-02-08","09:00:00","19:00:00","1");
 
 
