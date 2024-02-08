@@ -232,10 +232,10 @@ footer {
   .h2__title h2 {
     font-size: 18px !important; }
   .h2__title .left_h2 {
-    border: 8.4px solid transparent;
+    border: 10.8px solid transparent;
     border-left-color: #000; }
   .h2__title .right_h2 {
-    border: 8.4px solid transparent;
+    border: 10.8px solid transparent;
     border-right-color: #000; }
 
   table {
