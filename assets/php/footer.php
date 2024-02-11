@@ -28,6 +28,12 @@
 								<img src="./assets/img/dpd.jpg" alt="" class="footer-img">
 							</a>
 						</div>
+						<div class="git-hub">
+							<a href="http://https://github.com/sysoev84l/dpdpgk" target="_blank" rel="noopener noreferrer">
+							<i class="fab fa-github"></i>
+							GitHub
+							</a>
+						</div>
 						<div class="copyright-txt">
 							<div class="copyright-date">
 								Copyright &copy;

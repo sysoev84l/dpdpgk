@@ -203,6 +203,16 @@ footer {
 .footer-img {
   height: 48px; }
 
+.git-hub {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center; }
+
 .copyright-txt {
   display: -webkit-box;
   display: -webkit-flex;

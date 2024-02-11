@@ -15,3 +15,5 @@
 <link rel="stylesheet" href="assets/css/animate.css" />
 <!-- Link CSS -->
 <link rel="stylesheet" href="assets/css/style.css" />
+<!-- Link fontawesome CSS -->
+<link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
