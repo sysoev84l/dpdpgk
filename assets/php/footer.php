@@ -29,7 +29,7 @@
 							</a>
 						</div>
 						<div class="git-hub">
-							<a href="http://https://github.com/sysoev84l/dpdpgk" target="_blank" rel="noopener noreferrer">
+							<a href="https://github.com/sysoev84l/dpdpgk" target="_blank" rel="noopener noreferrer">
 							<i class="fab fa-github"></i>
 							GitHub
 							</a>
