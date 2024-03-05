@@ -138,7 +138,7 @@ h2 {
     font-size: $h2_fz;
   }
 
-  span {
+  .arrow-span {
     display: block;
     widows: 0;
     height: 0;
@@ -305,16 +305,35 @@ footer {
 
   .h2__title {
     h2 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
       font-size: $h2_fz/2 !important;
-    }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+         -moz-box-orient: vertical;
+         -moz-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
 
+      .span-separator {display: none;}
+    }
+    .left_h2, .right_h2 {
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center;
+    }
     .left_h2 {
-      border: (($h2_fz/3)/100) * 90 solid transparent;
+ 
+      border: (($h2_fz/2)/100) * 90 solid transparent;
       border-left-color: $h2_color;
     }
 
     .right_h2 {
-      border: (($h2_fz/3)/100) * 90 solid transparent;
+      border: (($h2_fz/2)/100) * 90 solid transparent;
       border-right-color: $h2_color;
     }
   }

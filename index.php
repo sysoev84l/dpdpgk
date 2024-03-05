@@ -51,7 +51,7 @@ $current_month = date('Y-m');
 							$date_start = $_POST['date_start'];
 							$date_end = $_POST['date_end'];
 							$works = $mysqli->query("SELECT * FROM work_time WHERE `date` BETWEEN '$date_start' AND '$date_end' ORDER BY `date` ASC");
-							$h2 = $date_start . " - " . $date_end;
+							$h2 = "<span>" . $date_start ."</span>" . "<span class='span-separator'> - </span>" . "<span>" .$date_end . "</span>";
 						} else {
 							$works = $mysqli->query("SELECT * FROM work_time WHERE `date` LIKE '" . $current_month . "-%' ORDER BY `date` ASC");
 							$h2 = $current_month;
@@ -62,11 +62,11 @@ $current_month = date('Y-m');
 						?>
 						<section class="mb-4 section__title">
 							<div class="h2__title">
-								<span class="left_h2 animated fadeInLeft"></span>
-								<h2>
+								<span class="arrow-span left_h2 animated fadeInLeft"></span>
+								<h2 class="date-title">
 									<?= $h2 ?>
 								</h2>
-								<span class="right_h2 animated fadeInRight"></span>
+								<span class="arrow-span right_h2 animated fadeInRight"></span>
 							</div>
 						</section>
 
