@@ -1,19 +1,35 @@
-<?php 
+<?php
 require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/functions.php";
-header_delay()
+header_delay();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/head.php"; ?>
 </head>
 
-<body>
-    <h1>Что то пошло не так</h1>
+<body data-page="4">
+    <div class="wrapper">
+        <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/header.php"; ?>
+        <main class="content page-404">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center title-404">Что то пошло не так!!</h1>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/footer.php"; ?>
+    </div>
+    <div class="progress-wrapper">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/assets/php/js.php"; ?>
 </body>
 
 </html>
