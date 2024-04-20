@@ -10,7 +10,6 @@ CREATE TABLE `work_price` (
 INSERT INTO work_price VALUES("2","2022-09-01","150");
 INSERT INTO work_price VALUES("5","2021-02-01","135");
 INSERT INTO work_price VALUES("6","2023-10-01","209");
-INSERT INTO work_price VALUES("7","2024-01-01","190");
 INSERT INTO work_price VALUES("8","2024-01-01","190");
 
 
