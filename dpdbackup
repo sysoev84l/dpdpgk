@@ -1,3 +1,4 @@
+cd /var/www/dpdpgk.local
 # export sql
 ./export.php
 cat backup.sql
