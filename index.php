@@ -146,7 +146,7 @@ $current_month = date('Y-m');
 									<div class="radio-form">
 										<div class="form-check form-check-inline">
 											<input class="form-check-input" type="radio" name="break-time"
-												id="break-time1" value="0">
+												id="break-time1" value="0" checked>
 											<label class="form-check-label" for="break-time1">
 												без перерыва
 											</label>
@@ -160,7 +160,7 @@ $current_month = date('Y-m');
 										</div>
 										<div class="form-check form-check-inline">
 											<input class="form-check-input" type="radio" name="break-time"
-												id="break-time3" value="1" checked>
+												id="break-time3" value="1">
 											<label class="form-check-label" for="break-time3">
 												1 час
 											</label>
